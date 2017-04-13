@@ -1711,13 +1711,13 @@ local cmdss = redis:hget('group:'..msg.to.id..':cmd', 'bot')
 	end
 if not lang then
 local settings = data[tostring(target)]["settings"] 
-text = "*Group Settings:*\n_Lock edit :_ *"..settings.lock_edit.."*\n_Lock links :_ *"..settings.lock_link.."*\n_Lock tags :_ *"..settings.lock_tag.."*\n_Lock Join :_ *"..settings.lock_join.."*\n_Lock flood :_ *"..settings.flood.."*\n_Lock spam :_ *"..settings.lock_spam.."*\n_Lock mention :_ *"..settings.lock_mention.."*\n_Lock arabic :_ *"..settings.lock_arabic.."*\n_Lock webpage :_ *"..settings.lock_webpage.."*\n_Lock markdown :_ *"..settings.lock_markdown.."*\n_Group welcome :_ *"..settings.welcome.."*\n_Lock pin message :_ *"..settings.lock_pin.."*\n_Bots protection :_ *"..settings.lock_bots.."*\n_Flood sensitivity :_ *"..NUM_MSG_MAX.."*\n_Character sensitivity :_ *"..SETCHAR.."*\n_Flood check time :_ *"..TIME_CHECK.."*\n*____________________*\n_Bot Commands :_ *"..cmdsss.."*\n_Expire Date :_ *"..expire_date.."*\n*Bot channel*: @BeyondTeam\n*Group Language* : *EN*"
+text = "*Group Settings⚙️👥:*\n_🔹Lock edit :_ *"..settings.lock_edit.."*\n_🔸Lock links :_ *"..settings.lock_link.."*\n_🔹Lock tags :_ *"..settings.lock_tag.."*\n_🔸Lock Join :_ *"..settings.lock_join.."*\n_🔹Lock flood :_ *"..settings.flood.."*\n_🔸Lock spam :_ *"..settings.lock_spam.."*\n_🔹Lock mention :_ *"..settings.lock_mention.."*\n_🔸Lock arabic :_ *"..settings.lock_arabic.."*\n_🔹Lock webpage :_ *"..settings.lock_webpage.."*\n_🔸Lock markdown :_ *"..settings.lock_markdown.."*\n_🔹Group welcome :_ *"..settings.welcome.."*\n_🔸Lock pin message :_ *"..settings.lock_pin.."*\n_🔹Bots protection :_ *"..settings.lock_bots.."*\n_🔸Flood sensitivity :_ *"..NUM_MSG_MAX.."*\n_🔹Character sensitivity :_ *"..SETCHAR.."*\n_🔸Flood check time :_ *"..TIME_CHECK.."*\n*____________________*\n_Bot Commands :_ *"..cmdsss.."*\n_Expire Date📆 :_ *"..expire_date.."*\n*Bot channel🔮*: @GODILOVEYOUME2\n*Group Language🌐* : *English🇦🇺*"
 else
 local settings = data[tostring(target)]["settings"] 
- text = "*تنظیمات گروه:*\n_قفل ویرایش پیام :_ *"..settings.lock_edit.."*\n_قفل لینک :_ *"..settings.lock_link.."*\n_قفل ورود :_ *"..settings.lock_join.."*\n_قفل تگ :_ *"..settings.lock_tag.."*\n_قفل پیام مکرر :_ *"..settings.flood.."*\n_قفل هرزنامه :_ *"..settings.lock_spam.."*\n_قفل فراخوانی :_ *"..settings.lock_mention.."*\n_قفل عربی :_ *"..settings.lock_arabic.."*\n_قفل صفحات وب :_ *"..settings.lock_webpage.."*\n_قفل فونت :_ *"..settings.lock_markdown.."*\n_پیام خوشآمد گویی :_ *"..settings.welcome.."*\n_قفل سنجاق کردن :_ *"..settings.lock_pin.."*\n_محافظت در برابر ربات ها :_ *"..settings.lock_bots.."*\n_حداکثر پیام مکرر :_ *"..NUM_MSG_MAX.."*\n_حداکثر حروف مجاز :_ *"..SETCHAR.."*\n_زمان بررسی پیام های مکرر :_ *"..TIME_CHECK.."*\n*____________________*\n_دستورات ربات :_ *"..cmdsss.."*\n_تاریخ انقضا :_ *"..expire_date.."*\n*کانال ما*: @BeyondTeam\n_زبان سوپرگروه_ : *فارسی*"
+ text = "*⚙️👥تنظیمات گروه:*\n_🔹قفل ویرایش پیام :_ *"..settings.lock_edit.."*\n_🔸قفل لینک :_ *"..settings.lock_link.."*\n_🔹قفل ورود :_ *"..settings.lock_join.."*\n_🔸قفل تگ :_ *"..settings.lock_tag.."*\n_🔹قفل پیام مکرر :_ *"..settings.flood.."*\n_🔸قفل هرزنامه :_ *"..settings.lock_spam.."*\n_🔹قفل فراخوانی :_ *"..settings.lock_mention.."*\n_🔸قفل عربی :_ *"..settings.lock_arabic.."*\n_🔹قفل صفحات وب :_ *"..settings.lock_webpage.."*\n_🔸قفل فونت :_ *"..settings.lock_markdown.."*\n_🔹پیام خوشآمد گویی :_ *"..settings.welcome.."*\n_🔸قفل سنجاق کردن :_ *"..settings.lock_pin.."*\n_🔹محافظت در برابر ربات ها :_ *"..settings.lock_bots.."*\n_🔸حداکثر پیام مکرر :_ *"..NUM_MSG_MAX.."*\n_🔹حداکثر حروف مجاز :_ *"..SETCHAR.."*\n_🔸زمان بررسی پیام های مکرر :_ *"..TIME_CHECK.."*\n*____________________*\n_دستورات ربات :_ *"..cmdsss.."*\n_📆تاریخ انقضا :_ *"..expire_date.."*\n*🔮کانال ما*: @GODILOVEYOUME2\n_🌐زبان سوپرگروه_ : *🇮🇷فارسی*"
 end
-text = string.gsub(text, 'yes', '✅')
-text = string.gsub(text, 'no', '❌')
+text = string.gsub(text, 'yes', '🔐')
+text = string.gsub(text, 'no', '🔓')
 if lang and tonumber(NUM_MSG_MAX) < 10 then
 text = string.gsub(text, '0', '0⃣')
 text = string.gsub(text, '1', '1⃣')
@@ -3577,9 +3577,9 @@ if (matches[1]:lower() == 'newlink' or matches[1] == 'لینک جدید') and is
   if matches[1]:lower() == "rules" or matches[1] == 'قوانین' then
  if not data[tostring(chat)]['rules'] then
    if not lang then
-     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@BeyondTeam"
+     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@GODILOVEYOUME2"
     elseif lang then
-       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@BeyondTeam"
+       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@GODILOVEYOUME2"
  end
         else
      rules = "*Group Rules :*\n"..data[tostring(chat)]['rules']
@@ -3908,7 +3908,7 @@ if not lang then
 if matches[1]:lower() == "help" or matches[1] == 'راهنما' and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
+*Black Bot Commands💎:*
 *!setmanager* `[username|id|reply]` 
 _Add User To Group Admins(CreatorBot)_
 *!Remmanager* `[username|id|reply]` 
@@ -4015,15 +4015,15 @@ _Show Tools Help_
 _Show Fun Help_
 *!helpmute*
 _Show mute Help_
-_You Can Use_ *[!/#]* _To Run The Commands_
-_This Help List Only For_ *Moderators/Owners!*
-_Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
+_You Can Use_ *[!/#]* _To Run The Commands✅_
+_This Help List Only For_ *Moderators/Owners!✅*
+_Its Means, Only Group_ *Moderators/Owners* _Can Use It!✅_
 *Good luck ;)*]]
 
 elseif lang then
 
 text = [[
-*دستورات ربات بیوند:*
+*💎دستورات ربات بلک:*
 *ادمین گروه* `[username|id|reply]` 
 _افزودن ادمین گروه(درصورت اینکه ربات سازنده  گروه)_
 *حذف ادمین گروه* `[username|id|reply]` 
@@ -4131,8 +4131,8 @@ _نمایش راهنمای سرگرمی_
 *!راهنما بیصدا*
 _نمایش دستورات بیصدا های گروه_
 
-_این راهنما فقط برای مدیران/مالکان گروه میباشد!
-این به این معناست که فقط مدیران/مالکان گروه میتوانند از دستورات بالا استفاده کنند!_
+_✅این راهنما فقط برای مدیران/مالکان گروه میباشد!
+این به این معناست که فقط مدیران/مالکان گروه میتوانند از دستورات بالا استفاده کنند!✅_
 *موفق باشید ;)*]]
 end
 return text
@@ -4241,9 +4241,9 @@ local data = load_data(_config.moderation.data)
 rules = administration[arg.chat_id]['rules']
 else
    if not lang then
-     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@BeyondTeam"
+     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@GODILOVEYOUME2"
     elseif lang then
-       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@BeyondTeam"
+       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@GODILOVEYOUME2"
  end
 end
 if data.username_ then
