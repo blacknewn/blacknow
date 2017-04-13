@@ -2769,15 +2769,15 @@ if not matches[2] and not msg.reply_id then
 local function getpro(arg, data)
    if data.photos_[0] then
        if not lang then
-            tdcli.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, data.photos_[0].sizes_[1].photo_.persistent_id_,'Chat ID : '..msg.to.id..'\nUser ID : '..msg.from.id,dl_cb,nil)
+            tdcli.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, data.photos_[0].sizes_[1].photo_.persistent_id_,'Chat ID💠 : '..msg.to.id..'\nUser ID🆔 : '..msg.from.id,dl_cb,nil)
        elseif lang then
-          tdcli.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, data.photos_[0].sizes_[1].photo_.persistent_id_,'شناسه گروه : '..msg.to.id..'\nشناسه شما : '..msg.from.id,dl_cb,nil)
+          tdcli.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, data.photos_[0].sizes_[1].photo_.persistent_id_,'💠شناسه گروه : '..msg.to.id..'\n🆔شناسه شما : '..msg.from.id,dl_cb,nil)
      end
    else
        if not lang then
-      tdcli.sendMessage(msg.to.id, msg.id_, 1, "`You Have Not Profile Photo...!`\n\n> *Chat ID :* `"..msg.to.id.."`\n*User ID :* `"..msg.from.id.."`", 1, 'md')
+      tdcli.sendMessage(msg.to.id, msg.id_, 1, "`You Have Not Profile Photo...🌄!`\n\n> *Chat ID👥 :* `"..msg.to.id.."`\n*User ID🆔 :* `"..msg.from.id.."`", 1, 'md')
        elseif lang then
-      tdcli.sendMessage(msg.to.id, msg.id_, 1, "_شما هیچ عکسی ندارید...!_\n\n> _شناسه گروه :_ `"..msg.to.id.."`\n_شناسه شما :_ `"..msg.from.id.."`", 1, 'md')
+      tdcli.sendMessage(msg.to.id, msg.id_, 1, "_🌄شما هیچ عکسی ندارید...!_\n\n> _👥شناسه گروه :_ `"..msg.to.id.."`\n_🆔شناسه شما :_ `"..msg.from.id.."`", 1, 'md')
             end
         end
    end
@@ -2818,9 +2818,9 @@ elseif not is_owner(msg) then
 	  save_data(_config.moderation.data, data)
 tdcli.pinChannelMessage(msg.to.id, msg.reply_id, 1)
 if not lang then
-return "*Message Has Been Pinned*"
+return "*Message Has Been Pinned📍*"
 elseif lang then
-return "پیام سجاق شد"
+return "📍پیام سجاق شد"
 end
 end
 end
@@ -3438,9 +3438,9 @@ if matches[1]:lower() == 'cmds' or matches[1] == 'دستورات' and is_owner(m
 if (matches[1]:lower() == "gpinfo" or matches[1] == 'اطلاعات گروه') and is_mod(msg) and msg.to.type == "channel" then
 local function group_info(arg, data)
 if not lang then
-ginfo = "*Group Info :*\n_Admin Count :_ *"..data.administrator_count_.."*\n_Member Count :_ *"..data.member_count_.."*\n_Kicked Count :_ *"..data.kicked_count_.."*\n_Group ID :_ *"..data.channel_.id_.."*"
+ginfo = "*Group Info📁 :*\n_Admin Count👥 :_ *"..data.administrator_count_.."*\n_Member Count🕹 :_ *"..data.member_count_.."*\n_Kicked Count📍 :_ *"..data.kicked_count_.."*\n_Group ID🆔 :_ *"..data.channel_.id_.."*"
 elseif lang then
-ginfo = "*اطلاعات گروه :*\n_تعداد مدیران :_ *"..data.administrator_count_.."*\n_تعداد اعضا :_ *"..data.member_count_.."*\n_تعداد اعضای حذف شده :_ *"..data.kicked_count_.."*\n_شناسه گروه :_ *"..data.channel_.id_.."*"
+ginfo = "*📁اطلاعات گروه :*\n_👥تعداد مدیران :_ *"..data.administrator_count_.."*\n_🕹تعداد اعضا :_ *"..data.member_count_.."*\n_📍تعداد اعضای حذف شده :_ *"..data.kicked_count_.."*\n_🆔شناسه گروه :_ *"..data.channel_.id_.."*"
 end
         tdcli.sendMessage(arg.chat_id, arg.msg_id, 1, ginfo, 1, 'md')
 end
